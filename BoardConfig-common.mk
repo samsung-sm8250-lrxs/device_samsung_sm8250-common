@@ -33,6 +33,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_USES_HWC2 := true
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
 # Kernel Cmdline
 BOARD_KERNEL_CMDLINE := console=null
