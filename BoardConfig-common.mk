@@ -65,6 +65,9 @@ BOARD_USES_METADATA_PARTITION := true
 
 BOARD_ROOT_EXTRA_FOLDERS := efs
 
+# Vendor Properties
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
