@@ -31,6 +31,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a9
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_USES_HWC2 := true
+
 # Kernel Cmdline
 BOARD_KERNEL_CMDLINE := console=null
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3
