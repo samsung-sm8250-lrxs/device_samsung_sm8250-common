@@ -39,7 +39,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/qcom/opensource/usb/etc
 
 # Health
 PRODUCT_PACKAGES += \
@@ -123,6 +124,10 @@ PRODUCT_PACKAGES += \
 # Shipping level
 PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_EXTRA_VNDK_VERSIONS := $(PRODUCT_SHIPPING_API_LEVEL)
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service-qti
 
 # WiFi
 PRODUCT_PACKAGES += \
