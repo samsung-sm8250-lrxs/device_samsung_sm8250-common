@@ -24,6 +24,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-service \
+    android.hardware.health@2.1-impl
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-common
