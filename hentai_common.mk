@@ -17,15 +17,8 @@
 #
 # All components inherited here go to system image
 #
-ifeq (,$(filter %_64,$(TARGET_PRODUCT)))
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-else
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
-endif
 $(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system.mk)
-
-# Enable CSI checking
-# PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
 #
 # All components inherited here go to system_ext image
@@ -44,11 +37,6 @@ $(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
 # TODO(b/136525499): move *_vendor.mk into the vendor makefile later
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
-
-#$(call inherit-product, device/google/gs101/device.mk)
-
-# TODO: fix
-# PRODUCT_RESTRICT_VENDOR_FILES := all
 
 # Enforce dark boot animation
 PRODUCT_PRODUCT_PROPERTIES += \

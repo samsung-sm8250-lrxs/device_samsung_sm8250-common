@@ -1,2 +1,5 @@
 soong_namespace {
+    imports: [
+        "vendor/samsung/sm8250-common",
+    ],
 }
