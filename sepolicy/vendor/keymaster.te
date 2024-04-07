@@ -1,0 +1,2 @@
+allow keydata_data_file labeledfs:filesystem associate;
+allow keyrefuge_data_file labeledfs:filesystem associate;

@@ -1,54 +1,57 @@
-# CAMERA
-ro.vendor.camera.                                u:object_r:vendor_camera_prop:s0
-vendor.camera.motor.service                      u:object_r:vendor_camera_motor_prop:s0
-vendor.npu.usr_drv.log_mask                      u:object_r:vendor_sec_camera_prop:s0
+# Audio
+audio.soundtrigger.debug.urser_id               u:object_r:vendor_audio_prop:s0
+audio_hal.in_period_size                        u:object_r:vendor_audio_prop:s0
 
-# Fastcharge
-persist.vendor.sec.fastchg_enabled               u:object_r:vendor_fastcharge_prop:s0
-
-# Fastrpc
-vendor.fastrpc                                   u:object_r:vendor_fastrpc_prop:s0
+# Camera
+camera.                                         u:object_r:vendor_camera_prop:s0
+persist.camera.                                 u:object_r:vendor_camera_prop:s0
+persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
+vendor.camera.boot_complete                     u:object_r:vendor_camera_prop:s0
+vendor.camera.sensor.                           u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.res.fmq.size                   u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.req.fmq.size                   u:object_r:vendor_camera_prop:s0
+ro.camera.res.fmq.size                          u:object_r:vendor_camera_prop:s0
+ro.camera.req.fmq.size                          u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
-vendor.finger.down                               u:object_r:vendor_fingerprint_prop:s0
+gf.debug.                                       u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.fpc.                             u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.sys.fp.                          u:object_r:vendor_fingerprint_prop:s0
+persist.sys.fp.                                 u:object_r:vendor_fingerprint_prop:s0
+ro.hardware.fp                                  u:object_r:vendor_fingerprint_prop:s0
+vendor.fps_hal.                                 u:object_r:vendor_fingerprint_prop:s0
+ro.boot.fpsensor                                u:object_r:vendor_fingerprint_prop:s0
 
-# Graphics
-vendor.display.sf.                               u:object_r:vendor_display_sf_prop:s0
-vendor.debug.egl.                                u:object_r:vendor_debug_egl_prop:s0
+# Global
+ro.boot.factorybuild                            u:object_r:vendor_public_vendor_default_prop:s0
+ro.boot.hwversion                               u:object_r:vendor_public_vendor_default_prop:s0
 
-# Member
-persist.vendor.members.                          u:object_r:vendor_members_prop:s0
+# IMEI
+persist.radio.imei                              u:object_r:vendor_deviceid_prop:s0
+persist.radio.meid                              u:object_r:vendor_deviceid_prop:s0
+ro.ril.miui.imei                                u:object_r:vendor_deviceid_prop:s0
+ro.ril.oem.imei                                 u:object_r:vendor_deviceid_prop:s0
+ro.ril.oem.meid                                 u:object_r:vendor_deviceid_prop:s0
 
-# Model
-ro.vendor.model_suffix                           u:object_r:vendor_model_suffix_prop:s0
-
-# NFC
-persist.vendor.nfc.log.index                     u:object_r:vendor_nfc_prop:s0
-ro.vendor.nfc.                                   u:object_r:vendor_sec_nfc_prop:s0
-vendor.nfc.fw.                                   u:object_r:vendor_nfc_prop:s0
+# Power
+vendor.powerhal.state                           u:object_r:vendor_power_prop:s0
+vendor.powerhal.audio                           u:object_r:vendor_power_prop:s0
+vendor.powerhal.lpm                             u:object_r:vendor_power_prop:s0
+vendor.powerhal.init                            u:object_r:vendor_power_prop:s0
+vendor.powerhal.rendering                       u:object_r:vendor_power_prop:s0
 
 # RIL
-ro.vendor.multisim.                              u:object_r:vendor_radio_prop:s0
-ro.vendor.radio.                                 u:object_r:vendor_radio_prop:s0
+ro.vendor.ril                                   u:object_r:vendor_public_vendor_default_prop:s0
 
 # Sensor
-vendor.sensor.                                   u:object_r:vendor_sensor_prop:s0
+persist.sensor.                                 u:object_r:vendor_sensors_prop:s0
+invn.hal.data.                                  u:object_r:vendor_sensors_prop:s0
+invn.hal.entry.                                 u:object_r:vendor_sensors_prop:s0
+invn.hal.debug.                                 u:object_r:vendor_sensors_prop:s0
+invn.hal.verbose.                               u:object_r:vendor_sensors_prop:s0
 
-# Sound
-vendor.dolby.                                    u:object_r:vendor_dolby_prop:s0
-
-# Tee
-vendor.sys.qseecomd.                             u:object_r:vendor_qseecomd_prop:s0
-
-# Vaultkeeper
-vendor.ro.security.vaultkeeper.                  u:object_r:vendor_sec_vaultkeeper_prop:s0
-vendor.security.vaultkeeper.                     u:object_r:vendor_sec_vaultkeeper_prop:s0
-ro.vendor.security.vaultkeeper.                  u:object_r:vendor_sec_vaultkeeper_prop:s0
-
-# Wifi
-ro.vendor.wifi.sap.interface                     u:object_r:vendor_wifi_prop:s0
-vendor.qcom.wifi.macloader                       u:object_r:vendor_wifi_prop:s0
-vendor.wifi.                                     u:object_r:vendor_wifi_prop:s0
-
-# Wlan Driver
-vendor.wlandriver.                               u:object_r:vendor_wlandriver_prop:s0
+# Thermal
+sys.thermal.                                    u:object_r:vendor_thermal_normal_prop:s0
+vendor.sys.thermal.                             u:object_r:vendor_thermal_normal_prop:s0
+persist.sys.thermal.config                      u:object_r:vendor_thermal_normal_prop:s0

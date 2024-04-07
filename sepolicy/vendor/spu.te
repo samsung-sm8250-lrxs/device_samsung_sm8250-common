@@ -1,0 +1,1 @@
+allow spu_file labeledfs:filesystem associate;

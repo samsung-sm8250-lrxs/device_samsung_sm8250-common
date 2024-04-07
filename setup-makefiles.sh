@@ -30,7 +30,7 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${HENTAI_ROOT}"
 # Warning headers and guards
 write_headers
 
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files-samsung.txt" true
 
 # Finish
 write_footers

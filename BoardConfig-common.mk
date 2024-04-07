@@ -31,8 +31,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a75
 
-TARGET_USES_64_BIT_BINDER := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
@@ -99,7 +97,6 @@ BOARD_ROOT_EXTRA_FOLDERS += \
     keydata \
     keyrefuge \
     metadata \
-    omr \
     optics \
     prism \
     spu
@@ -129,22 +126,22 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Platform
-PRODUCT_PLATFORM := kona
-TARGET_BOARD_PLATFORM := kona
-TARGET_BOOTLOADER_BOARD_NAME := kona
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
-QCOM_BOARD_PLATFORMS += kona
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := kona
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
-# SEPolicy
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+# Security patch level
+VENDOR_SECURITY_PATCH := 2024-01-01
+
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # Soong
 BUILD_BROKEN_DUP_RULES := true
