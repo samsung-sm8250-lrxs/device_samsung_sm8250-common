@@ -112,16 +112,20 @@ ro.frp.pst=/dev/block/persistent
 # GPU
 ro.gfx.driver.0=com.samsung.gamedriver.sm8250
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
-debug.sf.gpu_freq_index=3
 graphics.gpu.profiler.vulkan_layer_apk=com.samsung.vklayer.sm8250
 graphics.gpu.profiler.support=true
-debug.sf.disable_backpressure=1
-debug.sf.enable_gl_backpressure=1
-debug.sf.enable_advanced_sf_phase_offset=1
-persist.sys.sf.color_saturation=1.0
 ro.hardware.vulkan=adreno
 ro.hardware.egl=adreno
 ro.opengles.version=196610
+
+# SurfaceFlinger
+debug.sf.gpu_freq_index=3
+persist.sys.sf.color_saturation=1.0
+debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
+debug.sf.enable_advanced_sf_phase_offset=1
+ro.surface_flinger.vsync_event_phase_offset_ns=2000000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # OMX
 debug.stagefright.omx_default_rank=0
